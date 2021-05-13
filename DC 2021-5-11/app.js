@@ -21,3 +21,8 @@ console.log(reverseArr('My name is Ruth'), ['name', 'Ruth',
 'is', 'my'])
 console.log(reverseArr('How much wood could'), ['wood','could', 'much', 'How'])
 //gotten a little stuck. I've gotten it to the point (don't have the code there anymore tho), where I've reversed all individual letters...but that's it.
+
+function reverseArr(str){
+    return str.split(' ').sort((a,b)=>a.charCodeAt(a.length-1)-b.charCodeAt(b.length-1)).join(' ')
+}
+//so they split the string into words. Then they sort in alphabetical order with the condition that you are looking for the charcode of a at the end of the word minus the same for b. Then you join.
