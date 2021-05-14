@@ -18,3 +18,11 @@ function backwardsArray(arr){
 console.log(backwardsArray('I love you'), '..love I you')
 console.log(backwardsArray('This Dot'), '..This Dot')
 console.log(backwardsArray('United States of America'), '..America United of States')
+
+//Solution:
+function reverseArr(str){
+    return str.split(' ').sort((a,b)=>a.charCodeAt(a.length-1)-b.charCodeAt(b.length-1)).join(' ')
+}
+//the only diff here is that they did a.length - 1 (same for b) where I did a - 1. I'm not sure exactly why this happens the way it does. 
+//It doesn't work completely. Like it almost does, but with the first console log it doesn't and idk why. 
+//Overall I think I did pretty well at remembering.
