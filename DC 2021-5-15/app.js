@@ -24,7 +24,13 @@ function reverseStr(str){
     //join string and return
 }
 
-
+//second attempt
+function reverseStr(str){
+    let newStr = str.split('')
+    return newStr.map(s=>s===s.toLowerCase() ? s.toUpperCase() : s.toLowerCase()).join('').split(' ').reverse().join(' ')
+}
+//second time's the charm! I worked through this and was getting stuck. I tried to have the second split apply to newStr on another line and it did NOT like that even though the input should have been a str at that point...but it worked perfectly when I tacked it on to the previous line!
+//It was interesting noting my thinking process. At first I went for a for loop, and then I remembered, "Oh yeah, map! Map can do that for me!" .map() has always been a hard function for me and I'm glad to see I'm apparently understanding it.
 console.log(reverseStr('Example Input'), 'iNPUT eXAMPLE')
 console.log(reverseStr('This Dot'), 'dOT tHIS')
 console.log(reverseStr('I am a Very big FIsh'), 'fiSH BIG vERY A AM i')
