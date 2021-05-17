@@ -34,3 +34,15 @@ function reverseStr(str){
 console.log(reverseStr('Example Input'), 'iNPUT eXAMPLE')
 console.log(reverseStr('This Dot'), 'dOT tHIS')
 console.log(reverseStr('I am a Very big FIsh'), 'fiSH BIG vERY A AM i')
+
+//official answer
+function strTransform(str){
+    return str.split(' ')
+              .reverse()
+              .join(' ')
+              .split('')
+              .map(c => c == c.toLowerCase() ? c.toUpperCase() : c.toLowerCase())
+              .join('')
+  }
+  //Almost exactly the same as my soln. They did the word reversal before the caps reversal, but the map bit is exactly the same (which I am extremely proud of; haven't looked at this challenge in a WHILE. Look at me growing and understanding coding better!). They also stylistically changed it for it to be easier to read, which I understand.
+  //Go me!
