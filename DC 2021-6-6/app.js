@@ -24,3 +24,22 @@ function fib(f){
 }
 
 //Tryna get more info on this since it doesn't work in the console AND I don't understand why it's + and not *.
+
+//Create the function factorial that receives n and returns n!. You have to use recursion.
+
+//make a function that takes in our num n
+function fac(n){
+// make an arr with 0 and 1 already in it. 
+    let arr = [0,1]
+// for loop which establishes i
+    for(i = 2; i <= n; i++){
+// in for loop, set arr[i] equal to f(n) = f(n-1) + f(n-2)
+        arr[i] = arr[i-1] + arr[i-2]
+    }
+// return array of original num
+    return arr[n]
+}
+
+console.log(fib(3),6)
+console.log(fib(4),24)
+console.log(fib(3),120)
