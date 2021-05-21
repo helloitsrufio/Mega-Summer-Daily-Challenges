@@ -27,3 +27,12 @@ console.log(nthSmallest({177,225,243,-169,-12,-5,2,92} ,5))
 
 // Actually, now I do. The given examples have the given input as an object, and I have NO idea why they would do that, esp since they said that you'd be given AN ARRAY. In addition, the examples are often not returning the smallest number in the given array. 
 //With the console logs modified, however, this works BEAUTIFULLY. Proud of me.
+
+//given soln:
+//k, they started with an addition param. I didn't need this...?
+function nthSmallestElement(arr, num){
+//they also did arr.sort(). except they tacked on the num - 1 as well. So they basically did the same thing as I did, I just grabbed arr[0] instead of tacking on the [num - 1]. Bit weird that they would do that though. Wouldn't that just grab the last elem?
+    return arr.sort((a,b)=>a-b)[num - 1]
+  }
+  //ok but I did check to see if this worked with the og examples given and it does NOT. I AM VINDICATED.
+  //That means that I legitimately solved this! By myself! HELL YEAH
