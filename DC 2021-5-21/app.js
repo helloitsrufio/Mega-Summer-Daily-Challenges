@@ -20,3 +20,9 @@ function lastEven(arr, num){
 console.log(lastEven([1, 2, 3, 4, 5, 6, 7, 8, 9], 3),[4, 6, 8])
 console.log(lastEven([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2),[-8, 26])
 console.log(lastEven([6, -25, 3, 7, 5, 5, 7, -3, 23], 1),[6])
+
+//soln:
+function lastEven(arr,num){
+    //so they filtered like I did and got the even numbers. Feel proud that I at least got that part right. But then they tacked on .slice(). This must slice off whatever is in its parentheses, which, in this case is the last (indicated by -) numbers num. Makes sense. I was very close I think. 
+    return arr.filter(n => n % 2 === 0).slice(-num)
+  }
