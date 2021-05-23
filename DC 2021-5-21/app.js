@@ -26,3 +26,10 @@ function lastEven(arr,num){
     //so they filtered like I did and got the even numbers. Feel proud that I at least got that part right. But then they tacked on .slice(). This must slice off whatever is in its parentheses, which, in this case is the last (indicated by -) numbers num. Makes sense. I was very close I think. 
     return arr.filter(n => n % 2 === 0).slice(-num)
   }
+
+  //Another attempt:
+  //Return the last even numbers up to the number n.
+
+  //make a function that takes in an array and a number
+  
+  //At first I didn't think this worked so I was really confused because I was *sure* that I had gotten it right. Well, I looked at the soln and it was exactly the same as the above. I had gotten it right, I just wasn't reading the console logs correctly.
