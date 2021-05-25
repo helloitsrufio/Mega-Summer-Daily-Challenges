@@ -17,3 +17,10 @@ function getA(arr){
 }
 console.log(['a', 'b', 'a', 'c', 'a', 'd'])
 //no...this isn't working either, which is really weird because i feel like it should. I'm at a loss. not even reducing the nums of = works.
+
+function occurrencesOfA(arr){
+    //filter if certain el is a
+    return arr.filter(el=>el === 'a').length
+    //return .length to see how many occurrences
+}
+//Well...I did have it right. I just put the function call in the console.log. I only was returning that one array. It had nothing to do with the function, so I'm pretty proud of myself for getting this one.
