@@ -18,3 +18,12 @@ console.log(fib(3),6)
 console.log(fib(4),24)
 console.log(fib(5),120)
 //not working because I can't get it to recognize 'sum' for some reason. Really really weird. And if I try to return the line in the for loop it just returns as undefined.
+
+//Solution:
+function fib(n){
+    let arr = [0,1]
+    for(let i = 2; i <=n; i++){
+        arr[i] = arr[i-1] + arr[i-2]
+    }
+    return arr[n]
+}
