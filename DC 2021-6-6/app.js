@@ -17,3 +17,10 @@ if(f < 2){
 }
 //num multiplied by recursion f * (f-1)
 }
+//This was not the solution, although it worked. This was:
+
+function fib(f){
+    return f < 2 ? f : fib(f-1) + fib(f-2)
+}
+
+//Tryna get more info on this since it doesn't work in the console AND I don't understand why it's + and not *.
