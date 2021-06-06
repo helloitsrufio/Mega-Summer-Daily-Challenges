@@ -21,9 +21,14 @@ console.log(fib(5),120)
 
 //Solution:
 function fib(n){
+    //So they make an array that already has 0 and 1 in it. I suppose that makes sense because we need to account for those two nums?
     let arr = [0,1]
+    //Making a for loop like I did with some differences. They just straight up set i = 2 instead of i >= 2. I wonder if one is better than the other. And then they didn't do n.length. I guess...they didn't need to?
     for(let i = 2; i <=n; i++){
+        //so they're setting the index of arr (which I guess is just supposed to be n, as in n = n-1 + n-2) equal to that same array, since that's where we're operating from, using the formula.
         arr[i] = arr[i-1] + arr[i-2]
     }
+    //And they they are returning array of the given number.
     return arr[n]
 }
+//Honestly this solution is a bit confusing to me. I feel like mine made a *little* more sense. But I think I can understand the logic here.
