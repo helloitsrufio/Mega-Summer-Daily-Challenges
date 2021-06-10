@@ -12,3 +12,19 @@ function gcd(x,y){
 
 }
 //couldn't remember
+
+//soln
+function gcd(x,y){
+    return y == 0 ? x : gcd(y, x % y)
+}
+
+//integers are +. x and y are always >= 1. 
+//yield the greatest common divisor.
+console.log(gcd(144,60),12)
+console.log(gcd(35,5),5)
+console.log(gcd(100,30),10)
+
+function gcd(x,y){
+    return y > 0 ? x: gcd(y,x%y)
+}
+//only problem is that I didn't know what to set y equal to. It has to be 0 because greatest common divisor. It's the smaller number so it needs to be 0 where x is the actual gcd.
