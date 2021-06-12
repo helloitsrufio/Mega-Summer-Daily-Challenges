@@ -15,6 +15,12 @@ console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 41)
 //make a function that takes in an array
 function sumMix(arr){
     //map thru arr and make all elements numbers. Also add them via reduce.
-     arr.map(n=>Number(n)).reduce((a,c)=>a+c)
+     return arr.map(n=>Number(n)).reduce((a,c)=>a+c)
 
+}
+
+//given soln
+function sumMix(arr){
+    //so they simplified it by getting rid of .map() completely, which I understand, and tacking on the Number() to the current value. Smort. Also they gave a min val for reduce.
+    return arr.reduce((a,c)=>a+Number(c),0)
 }
