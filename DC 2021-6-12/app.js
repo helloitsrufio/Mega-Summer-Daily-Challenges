@@ -37,3 +37,16 @@ var fib = function(n) {
         return result
   }}
   //this isn't working in the browser and isn't super making sense to me either.
+
+const memo = {}
+var fib = function(n) {
+    if(n <= 1){
+        return n
+    }else if( memo[n]){
+        return memo[n]
+    }else{
+        //ok. This is where the magic happens. It goes down in that pyramid structure that Leon showed us. If n is not satisfied by the prev two conditions, then it is stuck into fib(n-1), which immediately begins another recursive loop with the num = n - 1, and so on and so forth. And then it will build back up using what it has in its cache.
+        let result = fib(n-1) + fib(n-2)
+        memo[n] = result
+        return result
+  }}
