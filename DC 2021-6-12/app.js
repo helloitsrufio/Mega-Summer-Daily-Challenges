@@ -15,3 +15,25 @@ function fib(n){
     //
 }
 //couldn't remember tbh
+
+//set memo to be an empty obj
+const memo = {}
+//the variable fib is equal to the function that takes in n WHERE
+var fib = function(n) {
+    //setting up base case. If n is less than or equal to 1, return n
+    if(n <= 1){
+        return n
+    //if not, if n is already in the memo obj.
+    }else if( memo[n]){
+        //return the memo obj
+        return memo[n]
+    //if n is not in memo obj already,
+    }else{
+        //set var result = to fib(n-1) + fib(n-2)
+        let result = fib(n-1) + fib(n-2)
+        //let n of memo equal to that result
+        memo[n] = result
+        //return result
+        return result
+  }}
+  //this isn't working in the browser and isn't super making sense to me either.
