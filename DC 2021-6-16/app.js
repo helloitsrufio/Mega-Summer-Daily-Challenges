@@ -30,3 +30,14 @@ console.log(updateVegetablesCollection(['potato', 'tomato', 'chillies', 'green-p
 
 console.log(updateVegetablesCollection(['potato', 'tomato', 'chillies', 'green-pepper'], 'chillies'));
 //This isn't working when I try to run it. I'm not sure exactly what it is. I think maybe a refactoring of my own solution might work out better?
+
+
+function updateVegetablesCollection(arr, veggie){
+    //filter arr so that if s = whatever veggie is, return with 'yes', otherwise return 'no'
+    return arr.map(s=>s === veggie? true:false)
+}
+
+console.log(updateVegetablesCollection(['broccoli', 'sprouts', 'veggie'], 'broccoli'), true)
+console.log(updateVegetablesCollection(['broccoli', 'sprouts', 'cucumber'], 'spinach'), false)
+console.log(updateVegetablesCollection(['cauliflower'], 'broccoli'), false)
+//Adapted soln to accommodate any given veggie param.
