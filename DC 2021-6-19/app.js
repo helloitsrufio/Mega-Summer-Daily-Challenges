@@ -22,3 +22,53 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
+//Recursion means calling the function within itself.
+// Should return an arr of nums composing the param num
+//Examples:
+
+//Attempt 1:
+
+function fib(n){
+    return fib(n-1) + fib(n-2)
+}
+//too much recursion err
+
+//Attempt 2:
+
+function fib(n){
+    let arr = [0,1],
+    for(i >= 2; i <= n.length; i++){
+         arr[i] = arr[fib(n-1)] + arr[fib(n-2)]
+    }
+    return arr[n]
+}
+//missing var name. What var?
+
+//Attempt 3:
+function fib(n){
+    let arr = [0,1],
+    for(i >= 2; i <= n.length; i++){
+         let newArr = arr[i] = arr[fib(n-1)] + arr[fib(n-2)]
+    }
+    return newArr[n]
+}
+//tried this with the new var name but it didn't work.
+
+//Attempt 4:
+function fib(n){
+    if(n>2){
+        for(i >= 2; i <= n.length; i++){
+         let newArr = arr[i] = arr[fib(n-1)] + arr[fib(n-2)]
+         }
+    return newArr[n]
+}}
+//returned undefined
+
+//Attempt 5:
+function fib(n){
+    if(n>2){
+     return fib(n-1) + fib(n-2)
+    }
+}
+//returned NaN
+console.log(fib(9))
