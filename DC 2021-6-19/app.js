@@ -72,3 +72,12 @@ function fib(n){
 }
 //returned NaN
 console.log(fib(9))
+
+//Teacher soln
+function fib(num){
+    if(num<2){
+        return num
+    }
+    return fib(num-1) + fib(num-2)
+}
+
