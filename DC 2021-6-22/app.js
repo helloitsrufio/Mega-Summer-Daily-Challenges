@@ -32,3 +32,16 @@ function fib(num){
     return num
 }
 //Doesn't work. In retrospect that's partially because I didn't start with an array = [0,1], and then I didn't put the results into arr[num]
+
+//Teacher solution
+function fib(n){
+    //arr being [0,1] because those will always stay the same in the fibonacci sequence.
+    let arr = [0,1]
+    //Doing a for loop to get the index. Starts at 2 due to the arr, and then the index needs to always be either less than or equal to the number. And needs to increment by 1.
+    for(let i = 2; i <= n; i++){
+        //The index num is equal to the two nums in arr added together
+        arr[i] = arr[i - 1] + arr[i - 2]
+    }
+    //this is the total, I believe?
+    return arr[n]
+}
