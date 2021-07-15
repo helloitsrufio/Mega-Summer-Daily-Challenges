@@ -44,6 +44,6 @@ function stringTransformer(str){
 //Teacher's soln:
 function transform(str){
     str.split(' ').reverse().join(' ')
-    return str.split('').map(l=> === l.toUpperCase() ? l.toLowerCase() : l.toUpperCase()).join('')
+    return str.split('').map(l=> l === l.toUpperCase() ? l.toLowerCase() : l.toUpperCase()).join('')
 }
 console.log(transform('Dogs aRE kInD of GRoss'))
