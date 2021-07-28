@@ -35,3 +35,15 @@ function twoOldestAges(ages){
       }
       //So they did largely the same thing I did. They sorted based on a,b and subtracting the two, and then they sliced using -2. Looking this up, this simply returns the last two items in an array. Makes sense. 
       //I didn't understand function(a,b){return a-b}, but looking it up, here's why it works. .sort() sorts the elements depending on the function's return val. If the val is (-), then the val in a will be before b. If it is 0, ordering will stay the same. If (+), the val in b will be ordered before a. So it sorts it thusly in ascending order. 
+
+      //Done in class by teacher:
+      function oldestAges(arr){
+          return arr.sort((a,b)=>a-b).slice(-2)
+      }
+      //also can do it this way:
+      function oldestAges(arr){
+          let sorted = arr.sort((a,b)=>b-a)
+          return [sorted[1], sorted,[0]]
+      }
+
+      //Both are pretty similar to the Codewars, esp the first.
