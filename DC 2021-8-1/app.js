@@ -19,15 +19,12 @@
 //More efficient is the Euclidean algorithm:
 //  x % y replaces (x,y) by {y, x % y}
 function mygcd(x,y){
-    if(x >= 1){
-        (y, x%y)
-    }1
+    return y == 0 ? x : mygcd(y, x % y)
 }
+// y = x * p + r
+// where p is the number of times x goes into y
+// and where r is the remainder
+//Now, the recursion stops when r = 0
+// If you don't have a base case it won't know when to stop.
 
-function fac(n){
-    if(n > 2){
-        return 1
-    }else{
-        return n * fac(n-1)
-    }
-}
+//What is the time complexity? O(log n). It is logarithmic because it is halfing each time and getting faster that way.
