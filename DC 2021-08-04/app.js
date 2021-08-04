@@ -12,3 +12,4 @@ var fib = function(n) {
     }
 }
 //Turned from quadratic to linear with each nth number we look @
+//Commit to memory
