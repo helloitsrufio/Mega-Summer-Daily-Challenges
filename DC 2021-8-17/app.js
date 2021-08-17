@@ -63,3 +63,26 @@ function ransomNote(str, mag) {
     }
     return true;
   }
+
+  //Teacher soln:
+
+  const ransomNote = (note, magazine) => {
+      const magazineWords = magazine.split(' ')
+      const magaazine Hash = {};
+
+      magazineWords.for(Each(word => {
+          if (!magazineHash[word]) magazineHash[word] = 0;
+          magazineHash[word]++
+      }))
+
+      const noteWords = note.split(' ');
+      let possible = true;
+
+      noteWords.forEach(word => {
+          if (magazineHash[word]) {
+              magazineHash[word]--;
+              if (magazineHash[word] < 0) possible = false;
+          } else possible = false;
+      })
+  }
+  //Even having my teacher walk through this is doesn't make a lot of sense. I don't have a ton of exp with hashmaps; I need to work with more of them. 
