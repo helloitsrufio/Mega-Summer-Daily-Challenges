@@ -30,6 +30,15 @@ class Solution {
         };
     };
 
+    //So that was C++, not JS, so it makes sense why it didn't make sense to me. This is their og starting code:
+    /**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    
+};
+
 
     function solution(arr) {
 //        set a minimum price var to the biggest num possible 
@@ -56,3 +65,47 @@ class Solution {
     //Ok, changed the = in line 47 to ==, and then put the return within the for loop. I'm getting undefined, which is much better than what I was getting before (just an error)
 
     //I tried to change line 49 for the two vars to subtract from one another (I switched up their order too) and it still returned undefined.
+
+
+    //This is my classmate's soln.
+    function findProfit(arr)  {
+        let min = 0, max = 0;
+        let profit = 0
+        for (let i = arr.length-1; i >= 0; i--) {
+          if  (arr[i] < min) {
+            min = arr[i]
+            profit = Math.max(profit, max - min)
+          }
+          if (arr[i] > max) {
+            max = arr[i];
+            min = arr[i];
+          }
+        }
+        return profit
+      }
+
+      //This is my teacher's soln:
+      function maxProfit(prices){
+          //biggest num possible
+          let min = Number.POSITIVE_INFINITY
+              max = 0
+              //looping through the arr
+              for(let i=0; i < prices.length; i++){
+                  //if the current num is less than min,
+                if(prices[i] < min){
+                    //it is the next min
+                    min = prices[i]
+                    //If the current num minus the min is greater than the max, 
+                }else if(prices[i] - min > max){
+                    //then run this line, which is setting the max equal to the current num minus the min.
+                    max = prices[i] - min
+                }
+              }
+              return max
+      }
+
+      //Seems so simple, esp comparatively to what my and others solns are.
+
+      //Honestly though, I did a LOT similar, at least until the else(if). I missed the condition there, but a lot of what I wrote was the same concepts as his was. My return was not just the max though.
+
+      //Apparently this is a famous Leetcode and often used in interviews.
