@@ -53,4 +53,4 @@ var majorityElement = function(nums){
             majVal = prop
     }
     return majVal;
-}
+}}
