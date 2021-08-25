@@ -68,3 +68,23 @@
         //Size is also a function, but you return the length...?
         size(){ return this.q.length }
       }
+
+      //Class soln
+      class Queue{
+        constructor(){
+          this.queue = []
+        }
+        //needs a parameter because it's putting something into the queue
+        enqueue(el){
+          //putting that element on the front
+          this.queue.unshift(el)
+        }
+        //no param needed because you're just poppping something off
+        dequeue(){
+          return this.queue.pop()
+        }
+        size(){
+          return this.queue.length
+        }
+      }
+      //For a queue data structure you always need to have these three methods: enqueue, dequeue, size.
