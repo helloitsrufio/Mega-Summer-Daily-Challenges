@@ -14,3 +14,5 @@
 //     Only valid arguments will be passed to the function.
 
 // Only valid arguments will be passed to the function!
+
+//https://www.codewars.com/kata/5aca48db188ab3558e0030fa
