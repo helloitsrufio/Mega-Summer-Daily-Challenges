@@ -61,3 +61,12 @@
         }
 
         //a little frustrating that I can't get this simple challenge right tbh even after trying 3 different variations.
+
+
+        //class soln:
+        //alarm bells should be going off when you see the sum. Classic reduce() problem
+        function sumAllValues(arr){
+            return arr.reduce((acc,c)=>acc + Number(c),0) //0 makes it start out as 0 and start off as type -> integer
+        }
+        console.log(sumAllValues([9,3,'7','3']), 22)
+        console.log(sumAllValues(['5','0',9,3,2,1,'9',6,7]), 42)
