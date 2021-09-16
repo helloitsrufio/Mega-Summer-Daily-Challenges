@@ -61,3 +61,15 @@
   
 
 // Hint: Filter the items where the index  equals the last index of and then reduce the sum
+
+
+ // Teacher's solution
+ function noRepeatSum(arr) {
+    return arr.filter(num => arr.indexOf(num) === arr.lastIndexOf(num)).reduce((a, c) => a + c, 0)
+  }
+  
+  console.log(noRepeatSum([4,5,7,5,4,8]),15)
+  console.log(noRepeatSum([9, 10, 19, 13, 19, 13]),19)
+  console.log(noRepeatSum([16, 0, 11, 4, 8, 16, 0, 11]),12)
+  console.log(noRepeatSum([5, 17, 18, 11, 13, 18, 11, 13]),22)
+  console.log(noRepeatSum([5, 10, 19, 13, 10, 13]),24)
