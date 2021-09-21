@@ -51,3 +51,7 @@ function nthSmallest(arr, pos){
     
     return sorted[pos-1];
   }
+
+  //you have to put in (a,b)=> a - b because .sort() sorts implicitly by alphabet, not numbers. So I thought it automatically would sort it in numerical order with just .sort(), but it didn't. If you want it in ascending order, you should write .sort((a,b) => a-b). And if you want to do descending order, it should be .sort((a,b) => b - a).
+
+  //Teacher basically did the same soln as the first online soln listed above.
