@@ -63,3 +63,27 @@ function duplicateEncode(word){
     }
 
     //frustrating because I feel like I'm kind of getting there? But then I didn't get solve it, so I need to review a soln.
+
+    //ok, looked up a solution and will write pseudocode explaining what is happening so I understand.
+    // going through online soln
+    function duplicateEncode(word){
+        //make an empty variable
+        var unique='';
+        //make word lowercase
+        word = word.toLowerCase();
+        //use a loop to define i
+        for(var i=0; i<word.length; i++){
+        //within loop, see if the last index of word[i], and i was previously defined, is equal to the index of word[i]
+            if(word.lastIndexOf(word[i]) == word.indexOf(word[i])){
+            //if that is the case, then it only occurs once, and you add '(' to the empty var 'unique'
+                unique += '(';
+            }//if that is not the case, then it only occurs more than once, and you add ')' to the empty var 'unique'
+            else{
+                unique += ')';
+            }
+        }
+        //then you return it!
+        return unique;
+    }
+    //looking at this soln makes me feel a bit better with my efforts since I got some of it right. But I wasn't quite there. I didn't utilize both .lastIndexOf and .indexOf. And I was having a hard time defining 'e'; they solved that via a for loop. And they did an empty variable; I didn't even think about doing that. I think there are probably more eloquent ways of solving this challenge, but this one made sense to me.
+ 
