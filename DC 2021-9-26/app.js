@@ -68,3 +68,24 @@ function last(x){
     //   Return
         }
         //this is what my classmate and I got done before the class started.
+
+    //______________________________________________________
+
+                //teacher soln
+        //P: Coming in we're dealing with a (valid) string.
+
+        function last(x){
+            //split => sort by last letter (a,b last char)
+            return x.split(' ').sort((a,b)=>a.slice(-1) > b.slice(-1))
+        }
+        //this doesn't work 100%. It's off by 1.
+
+        function last(x){
+            //split => sort by last letter (a,b last char)
+            return x.split(' ').sort((a,b)=>a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1))
+        }
+//gives actual lexigraphical equivalent. charCodeAt gets the # that the letter represents, where charAt gets the letter itself. Because of it grabbing the num of the letter and sort being weird when it comes to the situation it's in, charCodeAt works a lot better. 
+
+//.toLowerCase() if you care about uppercase or lowercase. Uppercase letters might have a dif lexigraphical value than lowercase. But try and get it done sooner and then if you have time factor that in.
+
+        console.log(last('man i need a taxi up to ubud'), ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up'])
