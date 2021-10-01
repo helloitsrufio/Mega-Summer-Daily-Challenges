@@ -63,3 +63,16 @@ function arrayDiff(arr1, arr2){
 //So, I have it so it takes in two arrays. Then I define a var, difference, and set it equal to arr1.filter(). Within that filter, I say that given x, if arr2 does not include x, return the difference.
 //.filter() says, "Given x, apply these conditions to it and filter...out based on those?"
 //Nope, it filters out elements into a new arr based on a condition. It does this my iterating through each el in the arr. So that's why I didn't need a for loop. 
+
+
+//Teacher soln:
+
+function arrayDiff(a,b){
+    let newSet = new Set(b)
+    return a.filter(n => !newSet.has(n)) 
+  }
+  console.log(arrayDiff([1,2,2,2,3],[2]),[1,3])
+  console.log(arrayDiff([1,2],[1]),[2])
+
+  //Ok, so teacher definitely did it differently. They made a new set by saying new Set of param b. Then they returned a with filter tacked on saying, "Given n, filter out if the new set has n." and returned.
+  //I don't really know 'Set'. 'Set' objects are collections of vals. You can iterate through elements of a set in insertion order, and each val in the Set can only occur once. If that's the case, why do they need the second line? Maybe the first line just ensures that there are no doubles in 'b'. 
