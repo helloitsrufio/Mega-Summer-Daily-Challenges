@@ -51,3 +51,19 @@ function sortArray(arr){
     console.log(sortArray([5, 3, 1, 8, 0]), [1, 3, 5, 8, 0])
 
 //Tried to use slice since it's pulling those out of an arr into a new one...I think? I also don't think I'm using .map() right. 
+
+//---------------------------
+
+//Teacher soln:
+function sortArray(arr){
+    //odd nums -< ascending (filter + sort)
+    const oddNums = arr.filter(n => n % 2 !==0).sort((a,b) => a - b)
+    // arr -> even stays in same spot and was odd from odd arr (map)
+    return arr.map(n => n % 2 === 0 ? n : oddNums.shift())
+}
+//Ok, let's work through this.
+//So my teacher has the function take in an arr.
+//Then they set a value oddNums equal to a filtered array. This is filtered by given n, if it is not even, sort it in ascending order.
+// Finally, map thru array again. Given n, if it is even, return n. If it is odd, grab the oddNums val (which has sorted odd numbers) and shift. Remember, shift removes the first element from the arr and returns it. So it maps through and keeps grabbing that first element. 
+//TBH I definitely forgot that .shift() was a thing. And I forgot what it did.
+//So what was done differently here was they used filter. They sorted and filtered the odd numbers and then had them in their own var. I definitely didn't do that. And I was tryna do !% to say not even, but I didn't set it to 0 and then say !== 0. I keep forgetting about that. And then I didn't actually do an arrow function in map where I was supposed to. This soln does make sense and I can definitely see where I went wrong. 
