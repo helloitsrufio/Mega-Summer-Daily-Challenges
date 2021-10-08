@@ -8,6 +8,52 @@
 // If the average length is not an integer, use Math.round().
 // The input array's length > 1
 
+//P: Will we be given anything that isn't a string? Yes; in the case of that happening, use Math.round(). Minimum length > 1
+//R: Will return an array of strings whose length are all uniform and are the average of the initial string.
+//E: See console logs
+//P: Make a function that takes in an arr
+
+//------------first attempt---------------
+     function averageLength(arr){
+//   Make a for loop that, given each element, averages 
+        let newArr = []
+        for(i=0; arr.length > 1; i++){
+            if(Math.round(arr[i].length) == Math.round(arr[i].length - 1)){
+                newArr.push(arr[i])
+            }
+        }
+//   Change length of each element to avg & return
+        return newArr
+     }
+
+//getting err message of 'Cannot read property 'length' of undefined.'
+
+//------------second attempt---------------
+
+     function averageLength(arr){
+        //   Make a for loop that, given each element, averages 
+                let newArr = []
+                for(i=0; i > arr.length; i++){
+                    newArr += arr[i]
+                }
+                return newArr / arr.length
+        //   Change length of each element to avg & return
+    }
+
+//returning nums instead of els in arr
+
+//------------third attempt---------------
+
+    function averageLength(arr){
+        let newArr = []
+        arr.map(el => el )
+    }
+    //not sure how to go about this with map(), but it seems like a good thing to use?
+
+
+console.log(averageLength(['u', 'y']), ['u', 'y'])
+console.log(averageLength(['aa', 'bbb', 'cccc']), ['aaa', 'bbb', 'ccc'])
+console.log(averageLength(['aa', 'bb', 'ddd', 'eee']), ['aaa', 'bbb', 'ddd', 'eee'])
 
 
 
