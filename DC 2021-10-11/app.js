@@ -45,6 +45,17 @@
         }
 
 
-console.log(removeConsecutiveDuplicates('alpha alpha beta omega'), 'alpha beta omega')
-console.log(removeConsecutiveDuplicates('beta gamma beta gamma alpha'), 'beta gamma alpha')
+//Teacher soln:
+//Supposed to be one of each series of values, not just one of the val. 
+//P: String of word entries coming in. Will it ever not be a string? Will there be special chars? Booleans? Extra empty spaces inside string?
+//R: Returning str that has a singular val for each consecutive duplicate word.
+//E: See test cases
+function removeConsecutiveDuplicates(str){
+//Split str => filter word that is not the next word=> join
+    return str.split(' ').filter((w, i, a) => w != a[i+1]).join(' ')
+}
+
+
+console.log(removeConsecutiveDuplicates('alpha beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'), 'alpha beta gamma delta alpha beta gamma delta')
+console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta delta alpha beta beta gamma gamma gamma delta'), 'beta gamma beta gamma alpha')
 console.log(removeConsecutiveDuplicates('How much wood can a woodchuck chuck if a woodchuck could chuck wood'), 'How much wood can a woodchuck chuck if a could')
