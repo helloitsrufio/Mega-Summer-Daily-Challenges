@@ -55,6 +55,10 @@ function removeConsecutiveDuplicates(str){
     return str.split(' ').filter((w, i, a) => w != a[i+1]).join(' ')
 }
 
+//Also, it's the exact same thing with a[i-1]
+//It's interesting that my teacher did this with .filter(), which is interesting because that was my first attempt at solving this. I just didn't know how to approach it, but I forgot that .filter() can take in an element, index, and array. That's what my teacher did and it worked out really beautifully. I've never actually seen those other params be used in action, so it's cool to see that be implemented.
+//So it takes in a string, which you then split based on spaces and turn into an array. You take this array and filter it based on 3 params: a word, index num, and array. So given a word, keep it in the new arr if it is not the next element in the array (demonstrated by saying the i of a, but plus one.) And then, of course, you have to make it a str again, so you use .join(' '). I'm not sure why I can't ever seem to get .join() to work...I feel like I kind of did a similar thing.
+
 
 console.log(removeConsecutiveDuplicates('alpha beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'), 'alpha beta gamma delta alpha beta gamma delta')
 console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta delta alpha beta beta gamma gamma gamma delta'), 'beta gamma beta gamma alpha')
