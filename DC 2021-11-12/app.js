@@ -31,4 +31,20 @@ console.log(indexOfVowel("John Doe hs seven red pples under his bsket"), 0)
 console.log(indexOfVowel("Bb Smith sent us six neatly arranged range bicycles"), 3)
 console.log(indexOfVowel("John A Doe hs seven red pples nder his bsket"), 0)
 
-
+//Teacher soln:
+function indexOfVowel(str){
+    //does val exist in string?
+    let vowels = 'aeiou'
+    //loop thru str checking for each letter.
+    for(let i = 0; i < vowels.length; i++){
+        //-1 means doesn't exist
+        if(str.toLowerCase().indexOf(vowels[i]) == -1){
+            return i
+        }
+    }
+    //if yes, then I know that it's not missing.
+}
+//indexOf only catches the first instance of a missing letter.
+//This was an interesting soln because it was WAAAY simpler than I thought it would be. I decided against a for loop because I thought I should probably use methods, but it worked well in my teacher's solutio.
+//They used the .indexOf() method, which I really haven't used much. NOTE: This method only looks for that first missing letter, and the -1 means thta that letter isn't there.
+//I also thought setting a var equal to all the vowels was interesting. I wouldn't have done that myself. 
