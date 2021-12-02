@@ -13,7 +13,6 @@
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
 
-<<<<<<< HEAD
 // From: https://leetcode.com/problems/majority-element/
 
 //1st soln:
@@ -29,6 +28,30 @@ function majorityElement(arr){
 
 //n(log n) is Big O. So this is not the optimal soln.
 // for/in should only be used for objects
-=======
-// From: https://leetcode.com/problems/majority-element/
->>>>>>> 973d1afe43107c4aecd99752a6259324095a5855
+function majorityElement(arr){
+  //map obj
+  let elem = {},
+      count = 0,
+      majElem = arr[0]
+
+  for(const num of arr){
+    //set property of whatever num is and assign it a value
+    //was the value already there? Set it equal to 1. If it was there, add one to it.
+    elem[num] = elem[num] + 1 || 1
+    //now we have the frequency by which each of the elems appear
+  }
+
+  for(const n in elem){
+    //as we're moving thru each num in elem, we're going to check its count
+    //if it's there and its value is greater than count
+    if(elem[n] > count){
+      //we'll set count to that val
+      count = elem[n]
+      //change majElem to be that property
+      majElem = n
+    }
+  }
+  return majElem
+}
+console.log(majorityElement([3,2,3]),3)
+console.log(majorityElement([2,2,1,1,1,2,2]),2)
