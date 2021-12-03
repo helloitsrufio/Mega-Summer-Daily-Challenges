@@ -13,6 +13,7 @@
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
 
+<<<<<<< HEAD
 // From: https://leetcode.com/problems/majority-element/
 
 //1st soln:
@@ -28,3 +29,6 @@ function majorityElement(arr){
 
 //n(log n) is Big O. So this is not the optimal soln.
 // for/in should only be used for objects
+=======
+// From: https://leetcode.com/problems/majority-element/
+>>>>>>> 973d1afe43107c4aecd99752a6259324095a5855
