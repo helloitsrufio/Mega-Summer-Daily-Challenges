@@ -27,3 +27,4 @@ function majorityElement(arr){
 }
 
 //n(log n) is Big O. So this is not the optimal soln.
+// for/in should only be used for objects
