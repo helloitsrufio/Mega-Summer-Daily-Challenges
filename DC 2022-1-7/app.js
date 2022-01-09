@@ -33,3 +33,8 @@ return count
 }
 
 
+function uniqueArrays(arr){
+    return arr.map(s=>new Set(s).size).reduce((a,c)=>a*c, 1)
+}
+
+// You have an array full of arrays. Map through the parent array and make sure each sub array is a set aka no duplicate numbers. Once each sub array contains no duplicates you can just reduce multiplying the length of each sub array together to get the total combinations 
