@@ -38,3 +38,18 @@ function uniqueArrays(arr){
 }
 
 // You have an array full of arrays. Map through the parent array and make sure each sub array is a set aka no duplicate numbers. Once each sub array contains no duplicates you can just reduce multiplying the length of each sub array together to get the total combinations 
+
+
+//don't want duplicates. Special characters? Empty arrays?
+//going to return a num which is the num of unique pairs
+console.log(uniqueArrays([[1,2], [4], [5,6]]),4)
+console.log(uniqueArrays([[1,2], [4,4], [5,6,6]]),4)
+
+//make a function that takes in an array
+function uniqueArrays(arr){
+    //use new set to get rid of duplicates
+    arr.map(s=> new Set(s).size).reduce((acc,c)=>acc*c,1)
+//.size to get length of el in set
+
+//.reduce where you multiply acc by current value, start at 1
+}
