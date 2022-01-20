@@ -1,5 +1,7 @@
 // The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
 
+const { stringify } = require("nodemon/lib/utils")
+
 // Examples
 // "din"      =>  "((("
 // "recede"   =>  "()()()"
@@ -76,3 +78,20 @@ function parenthesize(str){
               .join('')
               //looks pretty smooth and organized. A lot easier to read.
   }
+
+
+  //if it occurs once, return '('. If it occurs more than once, return ')'. Special chars included. Ignore capitalization.
+  //return a string that is composed of ( and ) based on their frequency in the string.
+
+  //make a function that takes in a str
+  function parenthesize(str){
+      //map thru string with 3 params: elem, index, and array, though we're only using the first and last. if the first elem is equal to the last, return ), else return (.
+     return str.toLowerCase()
+            .split('')
+            .map((e,i,a)=>a.indexOf(e) === a.lastIndexOf(e) ? str.replace(')') : str.replace('('))
+            .join('')
+  }
+  console.log(parenthesize('din'),"(((")
+  console.log(parenthesize('recede'),"()()()")
+  console.log(parenthesize('(( @'),"))((")
+  //really thought I remembered it well but I didn't. It doesnt work. It just repeats the original input the amount of times that there are elems.
