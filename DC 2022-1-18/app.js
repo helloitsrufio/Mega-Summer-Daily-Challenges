@@ -105,3 +105,11 @@ function parenthesize(str){
               //but this doesn't quite make sense to me. Wouldn't, if e-1 and e were the same, it be ')' since there are two of that elem? Really tryna think through it and I just...don't get it.
               .join('')
   }
+//Another!
+function parenthesize(str){
+    return str.toLowerCase()
+              .split('')
+              .map((e,i,a)=> a.indexOf(e) === a.lastIndexOf(e) ? '(' : ')')
+              .join('')
+}
+//Did it, though I STILL don't understand why it's '(' first instead of ')'.
