@@ -63,3 +63,16 @@ function parenthesize(str) {
     return newStr.join('')
 }
 //giving me a TypeError, the type error being that 'd' is not a function...?
+
+//solution:
+function parenthesize(str){
+    //ensure that everything is lower case, which I forgot
+    return str.toLowerCase()
+              //split if ofc
+              .split('')
+              //map thru, given 3 params: element, index, and array. say that in the array, if the index of the first element is the same as the index of the last, then ... I'm not exactly sure why this works tbh. Maybe this just a different way of doing e and e-1.
+              .map((e, i, a) => a.indexOf(e) === a.lastIndexOf(e) ? '(' : ')')
+              //then you join
+              .join('')
+              //looks pretty smooth and organized. A lot easier to read.
+  }
