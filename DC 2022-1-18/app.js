@@ -95,3 +95,13 @@ function parenthesize(str){
   console.log(parenthesize('recede'),"()()()")
   console.log(parenthesize('(( @'),"))((")
   //really thought I remembered it well but I didn't. It doesnt work. It just repeats the original input the amount of times that there are elems.
+
+  //going over soln again:
+  function parenthesize(str){
+    return str.toLowerCase()
+              .split('')
+              //right so the ONLY difference here is that they didn't do str.replace(). In the conclusion part of the ternary they just put '(' and ')', 
+              .map((e, i, a) => a.indexOf(e) === a.lastIndexOf(e) ? '(' : ')')
+              //but this doesn't quite make sense to me. Wouldn't, if e-1 and e were the same, it be ')' since there are two of that elem? Really tryna think through it and I just...don't get it.
+              .join('')
+  }
