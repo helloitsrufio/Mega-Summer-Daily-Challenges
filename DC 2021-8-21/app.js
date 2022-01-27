@@ -55,3 +55,5 @@ function numbersWordsRepeat(str){
 //Returns 'undefined'.
 
 //Have NOT solved it, but at least with each attempt I am not getting errors. I think the big issue is that I am having a hell of a time grabbing each element in the array. Without this, I can't even count it. But I haven't figured out the counting mechanism either really. A bit, but not well. I've spent a long time on this problem so far. :/
+
+//This sucks
